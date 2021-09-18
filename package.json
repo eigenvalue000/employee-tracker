@@ -1,0 +1,17 @@
+{
+    "name": "employee-tracker",
+    "version": "1.0.0",
+    "description": "A basic employee management system.",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Garrett Kegel",
+    "license": "MIT",
+    "dependencies": {
+        "express": "^4.17.1",
+        "mysql2": "^2.2.5",
+        "inquirer": "^8.1.5",
+        "sequelize": "^6.6.5"
+    }
+}
