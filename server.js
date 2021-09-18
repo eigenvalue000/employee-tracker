@@ -20,6 +20,7 @@ const db = mysql.createConnection(
     console.log(`Connected to the ems_db database.`)
   );
 
+  // A general query of the root.
   app.get('/', (req, res) => {
       db.query('SHOW databases', 
       function (err, results) {
@@ -27,6 +28,11 @@ const db = mysql.createConnection(
       })
   });
 
+  // If request not found, output a 404 status code.
+  app.use ((req, res) => {
+      res.status(404).end();
+  });
+  
   app.listen(PORT, () => {
       console.log(`Server running on port ${PORT}`);
   });
